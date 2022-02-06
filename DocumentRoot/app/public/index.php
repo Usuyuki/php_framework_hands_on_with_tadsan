@@ -1,8 +1,10 @@
 <?php
-
+  
 require_once __DIR__ . '/../../framework/fw.php';
 
+// realpath:正規化された絶対パスを返す(/../../てきなの無くす)
 app($_SERVER, realpath(__DIR__.'/../pages'),[
+    // デリミタを@にしている
     '@\A/\z@' => function(){
         header("Location: /index.php");
     },

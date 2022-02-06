@@ -3,17 +3,19 @@
 $counter_file = 'counter.txt';
 $counter_length = 8;
 
-$fp = fopen($counter_file, 'r+');
+$fp = fopen(__DIR__.'/'.$counter_file, 'r+');
 
 if ($fp){
     if (flock($fp, LOCK_EX)){
         $counter = fgets($fp, $counter_length);
         $counter+=1;
-        rewind($fp);
+        rewind($fp);//ファイルポインタの位置を先頭に
+        if (fwrite($fp,  $counter) === FALSE) {
+            echo 'ファイル書き込みに失敗しました';
+        }
         flock($fp, LOCK_UN);
     }
 }
-
 fclose($fp);
 
 ?>
@@ -25,7 +27,7 @@ fclose($fp);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>てすと</title>
+    <title>いにしえのカウンター</title>
 </head>
 
 <body>

@@ -4,13 +4,13 @@
 
 [初心者向け]フレームワークを 1 から作るところを見せるを参考に作成
 
-# リンク例
+# ローカル環境
 
-## テスト PHP
+```
+docker-compose up -d
+```
 
-## テスト画像
-
-http://localhost:2006/shigureni_free.png
+# リンク
 
 ## 現在時刻出力
 
@@ -19,6 +19,14 @@ http://localhost:2006/now
 ## 蔵書一覧表示
 
 http://localhost:2006/users/2/books
+
+## テスト PHP
+
+http://localhost:2006/hello.php
+
+## テスト画像
+
+http://localhost:2006/shigureni_free.png
 
 ## テスト HTML
 
