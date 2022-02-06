@@ -3,7 +3,8 @@
 function app(array $request, string $base_dir,array $routes){
     $url=parse_url($request['REQUEST_URI'])['path'];
 
-    if(is_file($base_dir/$url)){
+
+    if(is_file($base_dir.$url)){
         if(preg_match('@\.php@',$url)){
             readfile($base_dir.$url);
             include $base_dir .$url;
@@ -18,7 +19,7 @@ function app(array $request, string $base_dir,array $routes){
 
     foreach ($routes as $pattern=>$function){
         if(preg_match($pattern,$url,$param)){
-            $function($params);
+            $function($param);
             return;
         }
     }

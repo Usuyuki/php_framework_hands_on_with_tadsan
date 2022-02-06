@@ -12,7 +12,7 @@ services:
     image: nginx:latest
     volumes:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
-      - ./DocumentRoot/app/public:/usr/share/nginx/html
+      - ./DocumentRoot:/usr/share/nginx/html
     restart: always
     ports: ["2006:80"]
     depends_on: ["php"]
