@@ -25,5 +25,5 @@ function app(array $request, string $base_dir,array $routes){
     }
 
     http_response_code(404);
-    echo 'ないです';
+    echo $url.'はないです';
 }
