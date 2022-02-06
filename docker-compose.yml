@@ -5,14 +5,14 @@ services:
   php:
     build: ./php
     volumes:
-      - ./framework:/usr/share/nginx/html
+      - ./DocumentRoot:/usr/share/nginx/html
       - ./php/php.ini:/usr/local/etc/php/conf.d/php.ini
 
   nginx:
     image: nginx:latest
     volumes:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
-      - ./framework:/usr/share/nginx/html
+      - ./DocumentRoot/app/public:/usr/share/nginx/html
     restart: always
     ports: ["2006:80"]
     depends_on: ["php"]
