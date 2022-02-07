@@ -2,7 +2,7 @@
 
 # php_framework_hands_on_with_tadson
 
-[初心者向け]フレームワークを 1 から作るところを見せるを参考に作成
+[フレームワークを 一から作るところを見せた #phperkaigi](https://tadsan.fanbox.cc/posts/2059418)を参考に作成しております。
 
 # ローカル環境
 
