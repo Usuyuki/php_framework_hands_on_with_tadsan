@@ -1,8 +1,8 @@
 <!-- @format -->
 
-# php_framework_hands_on_with_tadson
+# php_framework_hands_on_with_tadsan
 
-[フレームワークを 一から作るところを見せた #phperkaigi](https://tadsan.fanbox.cc/posts/2059418)を参考に作成しております。
+[フレームワークを一から作るところを見せた #phperkaigi](https://tadsan.fanbox.cc/posts/2059418)を参考に作成しております。
 
 # ローカル環境
 
